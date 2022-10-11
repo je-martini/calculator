@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+    color: white;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.columns{
+    margin: 5px;
+    padding: 5px;
+}
