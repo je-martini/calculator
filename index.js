@@ -18,4 +18,35 @@ const equal_buttom = document.querySelector('.equal_buttom');
 const percentage = document.querySelector('.percentage');
 const zero = document.querySelector('.zero');
 const point = document.querySelector('.point');
+let math;
+
+math = Number(one.textContent) + Number(plus.textContent) + Number(two.textContent)
+console.log(math)
+// one.addEventListener('click', number)
+
+// function number () {
+//     math = Number(one.textContent) 
+//     plus.addEventListener('click', operations)
+
+//     function operations(){
+//         math = math + ' + '
+//         console.log(math)
+//         return math
+//     }
+
+//     two.addEventListener('click', adding)
+
+//     function adding(){
+//         math = math + two.textContent
+//         console.log(math)
+//         math = Number(math)
+//         console.log(math)
+//     }
+
+//     console.log(math)
+//     return math
+// }
+
+
+
 
