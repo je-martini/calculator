@@ -1,13 +1,46 @@
-body {
-    background-color: black;
-    color: white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-main{
+body {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+
 }
-.columns{
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    place-items: center;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 90%;
+    height: 70%;
+    /* justify-content: center;
+    align-items: center; */
+}
+.out_put{
+    grid-area: 1 / 1 / 1 / 5;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 60px 30px;
+    width: 100%;
+    height: 100px;
+}
+div{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+.equal_buttom{
+    grid-area: 5 / 4 / 7 / 5;
+    height: 100%;
+}
+/* .columns{
     margin: 5px;
     padding: 5px;
-}
+} */
