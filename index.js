@@ -1,12 +1,12 @@
 const output = document.querySelector('.out_put');
 const clear = document.querySelector('.clear');
-const division = document.querySelector('.division');
+const division_button = document.querySelector('.division');
 const mult = document.querySelector('.mult');
 const delet = document.querySelector('.delete');
 const seven = document.querySelector('.seven');
 const eight = document.querySelector('.eight');
 const nine = document.querySelector('.nine');
-const minus = document.querySelector('.minus');
+const minus_button = document.querySelector('.minus');
 const four = document.querySelector('.four');
 const five = document.querySelector('.five');
 const six = document.querySelector('.six');
@@ -130,6 +130,24 @@ function adding(){
     previus_number_display.innerHTML = previus_number_display.textContent + plus_display;
     is_previus_number_available = false
 }
+minus_button.addEventListener('click', minus)
+function minus(){
+    let minus_display = minus_button.textContent;
+    previus_number_display.innerHTML = previus_number_display.textContent + minus_display;
+    is_previus_number_available = false
+}
+mult.addEventListener('click', times)
+function times(){
+    let times_display = mult.textContent;
+    previus_number_display.innerHTML = previus_number_display.textContent + times_display;
+    is_previus_number_available = false
+}
+division_button.addEventListener('click', division)
+function division(){
+    let division_display = division_button.textContent;
+    previus_number_display.innerHTML = previus_number_display.textContent + division_display;
+    is_previus_number_available = false
+}
 
 equal_buttom.addEventListener('click', final_result)
 
@@ -140,57 +158,21 @@ function final_result(){
     if(just_sign == '+'){
         result = previus_number + next_number
     }
+    if ( just_sign == '-'){
+        result = previus_number - next_number
+    }
+    if ( just_sign == 'x'){
+        result = previus_number * next_number
+    }
+    if ( just_sign == '/'){
+        result = previus_number / next_number
+    }
 console.log(result)
 }
 
 
 
-// two.addEventListener('click', math) 
 
-// function math(number) {
-//     console.log('hi')
-//     if(is_previus_number){
-//         console.log('no')
-//         let uno = number
-//         console.log(uno)
-//         previus_number = Number(number.textContent)
-//         is_previus_number = false
-//         console.log(previus_number)
-//     } else {
-//         console.log('yes')
-//         let dos = number
-//         console.log(dos)
-//         next_number = Number(number.textContent)
-//         is_previus_number = true
-//         console.log(next_number)
-
-//     }
-
-// }
-
-
-// function number () {
-//     math = Number(one.textContent) 
-//     plus.addEventListener('click', operations)
-
-//     function operations(){
-//         math = math + ' + '
-//         console.log(math)
-//         return math
-//     }
-
-//     two.addEventListener('click', adding)
-
-//     function adding(){
-//         math = math + two.textContent
-//         console.log(math)
-//         math = Number(math)
-//         console.log(math)
-//     }
-
-//     console.log(math)
-//     return math
-// }
 
 
 
