@@ -23,6 +23,7 @@ let previus_number_display = document.createElement('p')
 let next_number_display = document.createElement('p')
 let previus_number = 0;
 let next_number = 0;
+let result = 0
 let is_previus_number_available = true;
 
 
@@ -133,7 +134,13 @@ function adding(){
 equal_buttom.addEventListener('click', final_result)
 
 function final_result(){
-    
+    previus_number = Number(previus_number_display.innerText.slice(0, previus_number_display.innerText.length - 1))
+    next_number = Number(next_number_display.innerText)
+    just_sign = previus_number_display.innerText.slice(previus_number_display.innerText.length - 1)
+    if(just_sign == '+'){
+        result = previus_number + next_number
+    }
+console.log(result)
 }
 
 
